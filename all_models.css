@@ -2,19 +2,23 @@
    THEME VARIABLES
    ========================= */
 :root {
+  /* Brand colors */
   --color-bg-main: #2e2e2e;
   --color-bg-dark: #1f1f1f;
-  --color-accent: #ffa31a;
+  --color-accent: red;
 
+  /* Text colors */
   --color-text-main: #f5f5f5;
   --color-text-muted: #d0d0d0;
-  --color-text-subtle: #999;
+  --color-text-subtle: #999999;
 
+  /* Layout */
   --max-width: 1200px;
-  --radius: 12px;
+  --section-padding: 4rem 2rem;
   --radius-pill: 999px;
 
-  --transition: 0.2s ease;
+  /* Transitions */
+  --transition-fast: 0.2s ease;
 }
 
 /* =========================

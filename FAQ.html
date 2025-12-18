@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>FAQ | MYUTO</title>
+  <meta name="description" content="Frequently asked questions about MYUTO models.">
+
+  <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">MYUTO</a>
+    <ul class="nav-links">
+      <li><a href="all_models.html">All Models</a></li>
+      <li><a href="#">Makes</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <h1>FAQ</h1>
+    <p>Answers to the most common questions about our models, printing, and safety.</p>
+  </section>
+
+  <section class="faq">
+    
+    <article class="faq-item">
+      <button class="faq-question">
+        Are these real firearms?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          No. All MYUTO models are mechanically working toy replicas designed for fun,
+          display, and learning. They do not fire real ammunition and cannot be converted
+          into real firearms.
+        </p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question">
+        What do the models shoot?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Most models use rubber bands, foam darts, or lightweight projectiles depending
+          on the design. Some LABS projects are display-only.
+        </p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question">
+        Are these safe for children?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          While many models are designed to be soft-shooting and gift-friendly,
+          adult supervision is recommended. Always follow the safety instructions
+          included with each model.
+        </p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question">
+        Do I need a 3D printer?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Yes. MYUTO models are provided as digital files intended for 3D printing.
+          Each model includes recommended printer settings and materials.
+        </p>
+      </div>
+    </article>
+
+    <article class="faq-item">
+      <button class="faq-question">
+        Can I modify or remix the models?
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Many models are designed with modularity in mind. Licensing details are
+          provided with each release — please review them before sharing or selling
+          modified versions.
+        </p>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2025 MYUTO</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.faq-item');
+      item.classList.toggle('open');
+    });
+  });
+</script>
+
+</body>
+</html>
