@@ -1,0 +1,193 @@
+/* =========================
+   CSS VARIABLES (THEME)
+   ========================= */
+:root {
+  /* Brand colors */
+  --color-bg-main: #2e2e2e;
+  --color-bg-dark: #1f1f1f;
+  --color-accent: #ffa31a;
+
+  /* Text colors */
+  --color-text-main: #f5f5f5;
+  --color-text-muted: #d0d0d0;
+  --color-text-subtle: #999999;
+
+  /* Layout */
+  --max-width: 1200px;
+  --section-padding: 4rem 2rem;
+  --radius-pill: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+}
+
+/* =========================
+   BASE RESET
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   HEADER / NAV
+   ========================= */
+.site-header {
+  background-color: var(--color-bg-dark);
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: var(--color-accent);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   HERO + FEATURED SECTIONS
+   ========================= */
+.hero,
+.featured {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--section-padding);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-eyebrow,
+.featured-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.hero h1,
+.featured h2 {
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.featured h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.hero-description,
+.featured-description {
+  color: var(--color-text-muted);
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2.2rem;
+  background-color: var(--color-bg-dark);
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: transform var(--transition-fast),
+              opacity var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* =========================
+   IMAGES
+   ========================= */
+.hero-image,
+.featured-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-subtle);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .hero,
+  .featured {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-description,
+  .featured-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+}

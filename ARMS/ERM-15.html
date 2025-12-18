@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ARMS ERM-15 | MYUTO</title>
+    <meta name="description" content="ARMS ERM-15 – a fully 3D printable toy rifle platform.">
+
+    <link rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="/" class="logo">MYUTO</a>
+            <ul class="nav-links">
+                <li><a href="../all_models.html">All Models</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product">
+
+        <!-- HERO -->
+        <section class="product-hero">
+
+            <!-- Image -->
+            <div class="product-media">
+                <img src="Images/ERM-15 Thorn Arms.jpg" alt="ERM-15 Thorn Arms" class="active">
+                <img src="Images/ERM-15 Slimpatt.jpg" alt="ERM-15 Slimpatt">
+                <img src="Images/ERM-15 Thorn Arms 2.jpg" alt="ERM-15 Thorn Arms">
+                <img src="Images/ERM-15 Thorn Arms stand.webp" alt="ERM-15 Thorn Arms Stand">
+                <img src="Images/ERM-15 Thorn.webp" alt="ERM-15 Thorn">
+                <img src="Images/ERM-15 DML.webp" alt="ERM-15 DML">
+                <img src="Images/ERM-15 Tactical.webp" alt="ERM-15 Tactical">
+
+                <div class="gallery-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                    <button class="dot" data-slide="4"></button>
+                    <button class="dot" data-slide="5"></button>
+                    <button class="dot" data-slide="6"></button>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="product-summary">
+                <h1 class="title">ARMS ERM-15</h1>
+                <p class="subtitle">
+                    Fully 3D-printable toy rifle platform inspired by the AR-15.
+                </p>
+
+                <div class="model-tags">
+                    <span>Rifle</span>
+                    <span>Rubber Band</span>
+                    <span>Working Toy</span>
+                </div>
+
+                <a href="#" class="btn-primary">Download Model</a>
+            </div>
+
+        </section>
+
+        <!-- DETAILS -->
+        <section class="product-details">
+            <div class="details-block">
+                <h2>Description</h2>
+                <p>
+                    This isn't just another blaster; it's a modular system with multiple configurations to suit your
+                    style. <br>
+                    Whether you want a clean classic build, a tactical setup, or a fully customizable platform – the
+                    ERM-15 has you covered! ✨
+                    <br><br>
+                    <span class="important-label">Important:</span> The ERM-15 is designed as a display piece and
+                    gift-friendly toy.
+                    It shoots much softer than the Ensis M5000C, making it perfect for younger makers or as stunning
+                    room decor
+                    with maximum authenticity! 🏆
+                </p>
+
+            </div>
+
+            <div class="details-block">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>AR-15/M4 Inspired Design: Maximum authenticity in a 3D printable toy platform.</li>
+                    <li>Multiple Configurations: From basic Classic to fully modular Thorn – build it your way!</li>
+                    <li>Fully 3D Printable: Pre-oriented STL files for easy printing and optimal part strength.</li>
+                    <li>Gift-Friendly: Softer shooting power makes it perfect for younger makers and safe display.</li>
+                    <li>Detailed Manual: Comprehensive English and Russian guides included!</li>
+                    <li>STEP project file (available on Boosty) with all modifications for CAD editing!</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 MYUTO</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.product-media img');
+        const dots = document.querySelectorAll('.dot');
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                images.forEach(img => img.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                images[i].classList.add('active');
+                dot.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

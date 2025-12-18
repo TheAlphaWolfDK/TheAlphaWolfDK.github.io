@@ -1,0 +1,270 @@
+/* =========================
+   THEME VARIABLES
+   ========================= */
+:root {
+  --color-bg-main: #2e2e2e;
+  --color-bg-dark: #1f1f1f;
+  --color-accent: #ffa31a;
+
+  --color-text-main: #f5f5f5;
+  --color-text-muted: #d0d0d0;
+  --color-text-subtle: #999;
+
+  --max-width: 1200px;
+  --radius: 12px;
+  --radius-pill: 999px;
+
+  --transition: 0.2s ease;
+}
+
+/* =========================
+   RESET / BASE
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.site-header {
+  background-color: var(--color-bg-dark);
+}
+
+.nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+.page-header {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem 1rem;
+}
+
+.page-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.page-header p {
+  color: var(--color-text-muted);
+}
+
+/* =========================
+   FILTERS
+   ========================= */
+.filters {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.filter.active {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
+/* =========================
+   MODELS GRID
+   ========================= */
+.models-grid {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   MODEL CARD
+   ========================= */
+.model-card {
+  background-color: var(--color-bg-dark);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition);
+}
+
+.model-card:hover {
+  transform: translateY(-4px);
+}
+
+.model-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.model-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.model-type {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.model-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; /* space above button */
+}
+
+.model-tags span {
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.btn-primary {
+  margin-top: auto;
+  align-self: flex-start;
+  background-color: var(--color-bg-main);
+  color: var(--color-accent);
+  text-decoration: none;
+  padding: 0.5rem 1.4rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+}
+
+/* =========================
+   GALLERY WITH DOTS
+   ========================= */
+/* Model Gallery */
+.model-gallery {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin-bottom: 1rem; /* default spacing for single-image cards */
+}
+
+.model-gallery img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  user-select: none;
+}
+
+.model-gallery img.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dots: only show for galleries with multiple images */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-top: 0.15rem; /* close to image */
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-text-subtle);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: var(--color-accent);
+}
+
+/* Hide dots if no .model-gallery exists (single images just use <img>) */
+.model-card:not(:has(.model-gallery)) .gallery-dots {
+  display: none;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--color-text-subtle);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .filters {
+    justify-content: center;
+  }
+}
