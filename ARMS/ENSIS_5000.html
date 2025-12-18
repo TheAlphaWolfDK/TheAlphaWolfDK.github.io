@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ARMS ENSIS M5000 | MYUTO</title>
+    <meta name="description" content="ENSIS M5000">
+
+    <link rel="stylesheet" href="product.css">
 </head>
+
 <body>
-    
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="/" class="logo">MYUTO</a>
+            <ul class="nav-links">
+                <li><a href="../all_models.html">All Models</a></li>
+                <li><a href="../FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product">
+
+        <!-- HERO -->
+        <section class="product-hero">
+
+            <!-- Image -->
+            <div class="product-media">
+                <img src="Images/ENSIS M5000/ENSIS M5000C.jpg" alt="ENSIS M5000C" class="active">
+                <img src="Images/ENSIS M5000/ENSIS M5000S.jpg" alt="ENSIS M5000S">
+                <img src="Images/ENSIS M5000/ENSIS M5000S.webp" alt="ENSIS M5000S">
+                <img src="Images/ENSIS M5000/Ensis M5000S 1.jpg" alt="ENSIS M5000S">
+                <img src="Images/ENSIS M5000/ENSIS M5000C.webp" alt="ENSIS M5000C">
+                <img src="Images/ENSIS M5000/ENSIS M5000S+C.jpg" alt="ENSIS M5000S and C">
+                <img src="Images/ENSIS M5000/ENSIS M5000 Guide.jpg" alt="ERM-15 DML">
+
+                <div class="gallery-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                    <button class="dot" data-slide="4"></button>
+                    <button class="dot" data-slide="5"></button>
+                    <button class="dot" data-slide="6"></button>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="product-summary">
+                <h1 class="title">ARMS ENSIS M5000</h1>
+                <p class="subtitle">
+                    Get ready to print your very own Ensis M5000S, a super cool toy rifle inspired by the sleek and elegant design of the ORSIS T5000M.
+                </p>
+
+                <div class="model-tags">
+                    <span>Rifle</span>
+                    <span>Rubber Band</span>
+                    <span>Working Toy</span>
+                </div>
+
+                <a href="#" class="btn-primary">Download Model</a>
+            </div>
+
+        </section>
+
+        <!-- DETAILS -->
+        <section class="product-details">
+            <div class="details-block">
+                <h2>Description</h2>
+                <p>
+                    This isn't just any toy; it's a fully functional model that uses a rubber band mechanism, similar to a slingshot, to fire projectiles.
+                    It’s perfect for some backyard fun or as a striking display piece! ✨
+                </p>
+
+            </div>
+
+            <div class="details-block">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Fully 3D Printable: Designed from the ground up to be printed with minimal fuss.</li>
+                    <li>Low Support Usage: With the right settings (like OrcaSlicer's Snug supports), you can reduce your support material to just 90-100g, saving you time and filament!</li>
+                    <li>Easy to Assemble: The ZIP file includes a detailed manual in both English and Russian to guide you through the build process.</li>
+                    <li>Versatile Filament: You can print this rifle with almost any filament you have. However, for the magazine spring to work correctly, PETG is required as PLA and ABS are too brittle for this part.</li>
+                    <li>Custom AR grips and tactical foregrips</li>
+                    <li>Stylish sights and muzzle devices</li>
+                    <li>And the most exciting part... the M5000C - an upgraded, reinforced version of this rifle! Get it on the Boosty below!🔥</li>
+                    <li href="https://boosty.to/myuto">Boosty</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 MYUTO</p>
+    </footer>
+
+    <script>
+        const images = document.querySelectorAll('.product-media img');
+        const dots = document.querySelectorAll('.dot');
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                images.forEach(img => img.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+
+                images[i].classList.add('active');
+                dot.classList.add('active');
+            });
+        });
+    </script>
+
 </body>
+
 </html>

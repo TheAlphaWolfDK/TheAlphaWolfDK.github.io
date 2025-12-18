@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>F19X & F19E | MYUTO</title>
+    <meta name="description" content="F19X and F19E working toy pistols.">
+    <link rel="stylesheet" href="product.css">
 </head>
+
 <body>
-    
+
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="/" class="logo">MYUTO</a>
+            <ul class="nav-links">
+                <li><a href="all_models.html">All Models</a></li>
+                <li><a href="#">Makes</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-page">
+        <section class="page-header">
+            <h1>F19X & F19E</h1>
+            <p>Two working toy pistols – similar style, different designs. Explore each one below.</p>
+        </section>
+
+        <!-- Product Variants -->
+        <article class="product-card">
+            <!-- F19X -->
+            <div class="product-images">
+                <div class="image-box">
+                    <img src="Images/F19/F19X.jpg" alt="F19X" class="active">
+                    <img src="Images/F19/F19X 2.webp" alt="F19X">
+                    <img src="Images/F19/F19X 3.webp" alt="F19X">
+                    <img src="Images/F19/F19X 4.webp" alt="F19X">
+                </div>
+                <div class="gallery-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h2>F19X</h2>
+                <p>
+                    Toy pistol that works <br><br>
+                    <span class="highlight">Important:</span> This model is NOT an exact replica of the original firearm and is intended exclusively for collecting, playing, and demonstration purposes. 
+                    The model is not a firearm and is intended for entertainment purposes only
+                </p>
+                <div class="product-tags">
+                    <span>Pistol</span>
+                    <span>Rubber Band</span>
+                    <span>Working Toy</span>
+                </div>
+                <a href="#" class="btn-primary">View Model</a>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <!-- F19E -->
+            <div class="product-images">
+                <div class="image-box">
+                    <img src="Images/F19/F19E.webp" alt="F19E" class="active">
+                    <img src="Images/F19/F19E 2.jpeg" alt="F19E">
+                    <img src="Images/F19/F19E 3.jpeg" alt="F19E">
+                    <img src="Images/F19/F19E 4.jpeg" alt="F19E">
+                    <img src="Images/F19/F19E 5.jpeg" alt="F19E">
+                    <img src="Images/F19/F19E 6.jpeg" alt="F19E">
+                </div>
+                <div class="gallery-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                    <button class="dot" data-slide="4"></button>
+                    <button class="dot" data-slide="5"></button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h2>F19E</h2>
+                <p>
+                    Like a Flick 19X. But much better<br><br>
+                    <span class="highlight">Important:</span> This model is NOT an exact replica of the original firearm and is intended exclusively for collecting, playing, and demonstration purposes. 
+                    The model is not a firearm and is intended for entertainment purposes only
+                </p>
+                <div class="product-tags">
+                    <span>Pistol</span>
+                    <span>Rubber Band</span>
+                    <span>Working Toy</span>
+                </div>
+                <a href="#" class="btn-primary">View Model</a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 MYUTO</p>
+    </footer>
+
+    <script>
+        // Simple gallery dots functionality for both variants
+        document.querySelectorAll('.product-card').forEach(card => {
+            const images = card.querySelectorAll('.image-box img');
+            const dots = card.querySelectorAll('.gallery-dots .dot');
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    images.forEach(img => img.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+
+                    images[i].classList.add('active');
+                    dot.classList.add('active');
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
